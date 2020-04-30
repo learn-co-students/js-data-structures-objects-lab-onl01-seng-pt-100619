@@ -13,6 +13,13 @@ function updateDriverWithKeyAndValue(driver, key, value){
 
 function destructivelyUpdateDriverWithKeyAndValue(driver, key, value){
     driver[key] = value;
+    // the function doesnt create a new object so the original object is updates by key and value
     return driver;
 };
 
+function deleteFromDriverByKey(driver, key){
+    let newDriver = {...driver};
+    delete newDriver[key];
+    // the new object is accesed with the delete keyword on the key using square bracket and not dot notation
+    return newDriver;
+};
