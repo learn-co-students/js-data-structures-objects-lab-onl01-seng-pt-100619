@@ -23,3 +23,9 @@ function deleteFromDriverByKey(driver, key){
     // the new object is accesed with the delete keyword on the key using square bracket and not dot notation
     return newDriver;
 };
+
+function destructivelyDeleteFromDriverByKey(driver, key){
+    delete driver[key];
+    return driver;
+    // function doesnt create a new jarascript object and modify the original
+};
